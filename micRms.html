@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    RED.nodes.registerType('mic-rms',{
+        category: 'input',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""}
+            
+        },
+        inputs:0,
+        outputs:2,
+        icon: "file.png",
+        label: function() {
+            return this.name||"mic-rms";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="mic-rms">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+
+
+<script type="text/html" data-help-name="mic-rms">
+    <p>A simple node that returns rms loudness from an active microphone</p>
+</script>
